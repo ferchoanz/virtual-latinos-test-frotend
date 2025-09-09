@@ -18,7 +18,7 @@ export function ApplicantsTable({ id }: ApplicantsTableProps) {
   return (
     <div className="card w-full shadow-xl bg-base-200 mt-6">
       <div className="card-body">
-        <h3 className="card-title text-xl font-bold mb-4">Aplicantes</h3>
+        <h3 className="card-title text-xl font-bold mb-4">Aplicants</h3>
         <div className="overflow-x-auto">
           <table className="table table-sm w-full">
             <thead>
