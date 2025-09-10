@@ -68,8 +68,6 @@ export function PostTable() {
   return (
     <>
       <div className="flex justify-start my-4 ml-4">
-        {" "}
-        {/* Contenedor para el botón */}
         <a href="/posts/create" className="btn btn-primary">
           Crear Post
         </a>

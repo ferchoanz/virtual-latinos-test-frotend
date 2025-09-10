@@ -86,6 +86,7 @@ export const PostsProvider: React.FC<PostsProviderProps> = ({ children }) => {
           post.id === id ? { ...post, ...response.data } : post
         )
       );
+      navigate("/posts");
     } else {
       Swal.fire({
         title: "Error!",

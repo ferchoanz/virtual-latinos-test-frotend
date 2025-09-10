@@ -1,22 +1,12 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useUser } from "~/context/UserContext";
 import type { ResponseModel } from "~/models/response.model";
 import type { User } from "~/models/user.model";
 
 export function useApi() {
-  const [user, setUser] = useState<User | null>(null);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedData = localStorage.getItem("user");
-      if (storedData) {
-        setUser(JSON.parse(storedData));
-      }
-    }
-  }, []);
+  const { user } = useUser();
 
   const token = user ? `Bearer ${user.token}` : "";
-
   const axios_instance = axios.create({
     baseURL: "http://localhost:8000/api/",
     headers: {

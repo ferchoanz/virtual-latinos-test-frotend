@@ -29,7 +29,6 @@ export function CreatePost() {
 
     await addPost(newPostData);
     setLoading(false);
-    // navigate("/posts");
   };
 
   return (
